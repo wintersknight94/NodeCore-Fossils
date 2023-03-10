@@ -1,0 +1,8 @@
+# If enabled, natural gas generates deep underground.
+wc_fossil.hydrocarbon_gas (Natural Gas Generates Underground) bool true
+
+# If enabled, crude oil generates deep underground.
+wc_fossil.hydrocarbon_oil (Crude Oil Generates Underground) bool true
+
+# If enabled, crude oil contaminates water sources, which is realistic but can severely slow down the game with excessive ABMs. Disabled by default.
+wc_fossil.oilwater (Oil Contaminates Water) bool false
