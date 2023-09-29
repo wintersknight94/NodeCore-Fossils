@@ -84,7 +84,7 @@ local function tooltip(name, group)
 	nodecore.register_craft({
 			label = "assemble " .. tool,
 			action = "stackapply",
-			{name = modname.. ":amber"},
+			wield = {name = modname.. ":amber"},
 			consumewield = 1,
 			indexkeys = {wood},
 			nodes = {{match = woodmatch, replace = "air"}},
