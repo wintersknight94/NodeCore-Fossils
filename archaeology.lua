@@ -24,10 +24,10 @@ end
 
 local function strata(substrata, eroded)
 	brush_fossil("amber_" ..substrata.. "_loose",		"amber",		eroded)
-	brush_fossil("bug_amber_" ..substrata.. "_loose",		"amber_bug",	eroded)
---	brush_fossil("leaf_" ..substrata.. "_loose",			"leaf",		eroded)
---	brush_fossil("sponge_" ..substrata.. "_loose",		"sponge",		eroded)
---	brush_fossil("shell_" ..substrata.. "_loose",		"shell",		eroded)
+	brush_fossil("bug_amber_" ..substrata.. "_loose",	"amber_bug",	eroded)
+	brush_fossil("leaf_" ..substrata.. "_loose",		"cast_leaf",		eroded)
+	brush_fossil("sponge_" ..substrata.. "_loose",		"cast_sponge",		eroded)
+	brush_fossil("shell_" ..substrata.. "_loose",		"cast_shell",		eroded)
 end
 
 strata("sandy",	"nc_terrain:sand")
