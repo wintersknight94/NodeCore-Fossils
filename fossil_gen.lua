@@ -30,11 +30,19 @@ local function fossil_gen(id, where, seed)
 end
 --<>----------------------------------------------------------------<>--
 local function strata(sediment, substrate)
-fossil_gen("amber_" ..sediment, 	substrate,	19047)
-fossil_gen("bug_amber_" ..sediment, 	substrate,	98229)
-fossil_gen("sponge_" ..sediment, 	substrate,	29342)
-fossil_gen("leaf_" ..sediment, 		substrate,	57848)
-fossil_gen("shell_" ..sediment, 	substrate,	02329)
+	fossil_gen("amber_" ..sediment, 		substrate,	19047)
+	fossil_gen("bug_amber_" ..sediment, 	substrate,	98229)
+	fossil_gen("sponge_" ..sediment, 		substrate,	29342)
+	fossil_gen("shell_" ..sediment, 		substrate,	02329)
+	
+	if minetest.get_modpath("wc_naturae") then
+		fossil_gen("leaf_" ..sediment, 		substrate,	57848)
+		fossil_gen("fungus_" ..sediment, 	substrate,	37681)
+	end
+	
+	if minetest.get_modpath("ncshark") then
+		fossil_gen("shark_" ..sediment, 	substrate,	73164)
+	end
 end
 --<>----------------------------------------------------------------<>--
 strata("sandy",		"nc_concrete:sandstone")
@@ -45,4 +53,9 @@ strata("limey", 	"nc_concrete:cloudstone")
 if minetest.get_modpath("wc_naturae") then
 	strata("shelly",	 "wc_naturae:shellstone")
 end
+
+if minetest.get_modpath("wc_pottery") then
+	strata("smecy",	 "wc_pottery:clay")
+end
+
 --<>----------------------------------------------------------------<>--

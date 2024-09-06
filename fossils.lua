@@ -15,6 +15,8 @@ local amberbug	= "(" ..coalstone.. ")^[mask:nc_woodwork_ladder_mask.png"
 local bugfossil	= amber.. "^(" ..amberbug.. "^[opacity:100)"
 local sponge	= "(nc_sponge.png^[colorize:GRAY:164)^[mask:nc_lux_dot_mask.png"
 local leaves	= "(wc_naturae_fern.png^[colorize:GRAY:164)^[mask:nc_lux_dot_mask.png"
+local fungus	= "(wc_naturae_mushroom.png^[colorize:GRAY:164)^[mask:nc_lux_dot_mask.png"
+local shark		= "(nc_terrain_gravel.png^[mask:ncshark_mask.png)^[mask:nc_lux_dot_mask.png"
 -- ================================================================== --
 ------------------------------------------------------------------------
 local function register_fossil(id, desc, txr, hardness, inplace)
@@ -53,6 +55,11 @@ local function strata(substrate, within, degrade, level)
 	
 	if minetest.get_modpath("wc_naturae") then
 		register_fossil("leaf_" ..substrate,		"Leaf",		"(" ..within.. ")^(" ..leaves.. "^[opacity:100)",		level,	degrade)
+		register_fossil("fungus_" ..substrate,		"Fungus",		"(" ..within.. ")^(" ..fungus.. "^[opacity:100)",		level,	degrade)
+	end
+	
+	if minetest.get_modpath("ncshark") then
+		register_fossil("shark_" ..substrate,		"Shark",		"(" ..within.. ")^(" ..shark.. "^[opacity:100)",		level,	degrade)
 	end
 end
 -- ================================================================== --
@@ -64,5 +71,10 @@ strata("limey",		limestone,		"nc_optics:glass_crude",	1)
 if minetest.get_modpath("wc_naturae") then
 	local shellstone = "wc_naturae_shellstone.png"
 	strata("shelly", shellstone, "wc_naturae:coquina", 1)
+end
+
+if minetest.get_modpath("wc_pottery") then
+	local claystone = "wc_pottery_ceramic.png"
+	strata("smecy", claystone, "wc_pottery:clay", 1)
 end
 -- ================================================================== --
