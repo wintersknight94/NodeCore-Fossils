@@ -30,18 +30,22 @@ local function fossil_gen(id, where, seed)
 end
 --<>----------------------------------------------------------------<>--
 local function strata(sediment, substrate)
-	fossil_gen("amber_" ..sediment, 		substrate,	19047)
-	fossil_gen("bug_amber_" ..sediment, 	substrate,	98229)
-	fossil_gen("sponge_" ..sediment, 		substrate,	29342)
-	fossil_gen("shell_" ..sediment, 		substrate,	02329)
+	fossil_gen("amber_" ..sediment, 		substrate,	190473)
+	fossil_gen("bug_amber_" ..sediment, 	substrate,	982291)
+	fossil_gen("sponge_" ..sediment, 		substrate,	293424)
+	fossil_gen("shell_" ..sediment, 		substrate,	023291)
 	
 	if minetest.get_modpath("wc_naturae") then
-		fossil_gen("leaf_" ..sediment, 		substrate,	57848)
-		fossil_gen("fungus_" ..sediment, 	substrate,	37681)
+		fossil_gen("leaf_" ..sediment, 		substrate,	578485)
+		fossil_gen("fungus_" ..sediment, 	substrate,	376819)
 	end
 	
 	if minetest.get_modpath("ncshark") then
-		fossil_gen("shark_" ..sediment, 	substrate,	73164)
+		fossil_gen("shark_" ..sediment, 	substrate,	731642)
+	end
+
+	if minetest.get_modpath("wc_crystals") then
+		fossil_gen("geode_" ..sediment, 	substrate,	472156)
 	end
 end
 --<>----------------------------------------------------------------<>--
@@ -58,4 +62,9 @@ if minetest.get_modpath("wc_pottery") then
 	strata("smecy",	 "wc_pottery:clay")
 end
 
+if minetest.get_modpath("wc_coal") then
+	strata("dusty",		"wc_coal:lignite", 1)
+	strata("bitty",		"wc_coal:bituminite", 1)
+	strata("anthy",		"wc_coal:anthracite", 1)
+end
 --<>----------------------------------------------------------------<>--

@@ -10,6 +10,7 @@ Play NodeCore as an archaeologist!
 - Sponge Fossil
 - Leaf Fossil
 - Shell Fossil
+- & More!
 
 # Hydrocarbons
 - Natural Gas (highly flammable)

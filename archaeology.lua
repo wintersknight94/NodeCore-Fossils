@@ -17,20 +17,28 @@ nodecore.register_craft({
 		{match = modname .. ":fossil_" ..node, replace = remain}
 	},
 	items = {
-		{name = modname.. ":" ..item},
+		{name = item},
 	}
 })
 end
 
 local function strata(substrata, eroded)
-	brush_fossil("amber_" ..substrata.. "_loose",		"amber",		eroded)
-	brush_fossil("bug_amber_" ..substrata.. "_loose",	"amber_bug",	eroded)
-	brush_fossil("sponge_" ..substrata.. "_loose",		"cast_sponge",		eroded)
-	brush_fossil("shell_" ..substrata.. "_loose",		"cast_shell",		eroded)
+	brush_fossil("amber_" ..substrata.. "_loose",		modname.. ":amber",		eroded)
+	brush_fossil("bug_amber_" ..substrata.. "_loose",	modname.. ":amber_bug",	eroded)
+	brush_fossil("sponge_" ..substrata.. "_loose",		modname.. ":cast_sponge",		eroded)
+	brush_fossil("shell_" ..substrata.. "_loose",		modname.. ":cast_shell",		eroded)
 	
 	if minetest.get_modpath("wc_naturae") then
-		brush_fossil("leaf_" ..substrata.. "_loose",		"cast_leaf",		eroded)
-		brush_fossil("fungus_" ..substrata.. "_loose",		"cast_fungus",		eroded)
+		brush_fossil("leaf_" ..substrata.. "_loose",		modname.. ":cast_leaf",		eroded)
+		brush_fossil("fungus_" ..substrata.. "_loose",		modname.. ":cast_fungus",		eroded)
+	end
+	
+	if minetest.get_modpath("ncshark") then
+		brush_fossil("shark_" ..substrata.. "_loose",		modname.. ":cast_shark",		eroded)
+	end
+	
+	if minetest.get_modpath("wc_crystals") then
+		brush_fossil("geode_" ..substrata.. "_loose",		"wc_crystals:geode",		eroded)
 	end
 end
 
@@ -44,5 +52,11 @@ if minetest.get_modpath("wc_naturae") then
 end
 
 if minetest.get_modpath("wc_pottery") then
-	strata("smecy",	"wc_pottery:clay")
+	strata("smecy",		"wc_pottery:clay")
+end
+
+if minetest.get_modpath("wc_coal") then
+	strata("dusty",		"wc_coal:lignite_loose", 1)
+	strata("bitty",		"wc_coal:bituminite_loose", 1)
+	strata("anthy",		"wc_coal:anthracite_loose", 1)
 end
