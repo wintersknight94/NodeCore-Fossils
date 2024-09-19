@@ -1,6 +1,6 @@
 -- LUALOCALS < ---------------------------------------------------------
-local include, nodecore
-    = include, nodecore
+local include, minetest, nodecore
+    = include, minetest, nodecore
 -- LUALOCALS > ---------------------------------------------------------
 local modname = minetest.get_current_modname()
 ------------------------------------------------------------------------
@@ -13,11 +13,10 @@ end
 include("gaseous")	
 
 include("brush")
+include("brush_fancy")
 
 include("amber")
 include("casts")
-
---include("geode")
 
 include("deposits")
 

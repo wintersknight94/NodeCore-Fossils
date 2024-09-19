@@ -11,7 +11,7 @@ nodecore.register_craft({
 	action = "pummel",
 	priority = 1,
 --	duration = 10,
-	toolgroups = {brushy = 1, crumbly = 1}, --crumbly for the time being until i solve 'brushy' issue
+	toolgroups = {brushy = 1}, --crumbly for the time being until i solve 'brushy' issue
 	indexkeys = {modname .. ":fossil_" ..node},
 	nodes = {
 		{match = modname .. ":fossil_" ..node, replace = remain}
