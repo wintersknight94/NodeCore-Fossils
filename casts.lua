@@ -4,8 +4,8 @@ local minetest, nodecore
 -- LUALOCALS > ---------------------------------------------------------
 local modname = minetest.get_current_modname()
 
-local cast		= modname.. "_cast_mask.png"
-
+local cast		= "wc_lib_resources_mask_nodulette.png"
+--local cast		= modname.. "_cast_mask.png"
 local sponge	= "(nc_sponge.png^[colorize:GRAY:164)^[mask:" ..cast
 local shell 	= "(" ..modname.. "_shell.png^[colorize:GRAY:164)^[mask:" ..cast
 local leaf		= "(wc_naturae_fern.png^[colorize:GRAY:132)^[mask:" ..cast
