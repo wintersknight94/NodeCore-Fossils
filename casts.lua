@@ -6,10 +6,10 @@ local modname = minetest.get_current_modname()
 
 local cast		= "wc_lib_resources_mask_nodulette.png"
 --local cast		= modname.. "_cast_mask.png"
-local sponge	= "(nc_sponge.png^[colorize:GRAY:164)^[mask:" ..cast
-local shell 	= "(" ..modname.. "_shell.png^[colorize:GRAY:164)^[mask:" ..cast
-local leaf		= "(wc_naturae_fern.png^[colorize:GRAY:132)^[mask:" ..cast
-local fungus	= "(wc_naturae_mushroom.png^[colorize:GRAY:164)^[mask:" ..cast
+local sponge	= "(nc_sponge.png^[colorize:DARKGREY:200)^[mask:" ..cast
+local shell 	= "(" ..modname.. "_shell.png^[colorize:DARKGREY:200)^[mask:" ..cast
+local leaf		= "(wc_naturae_fern.png^[colorize:DARKGREY:200)^[mask:" ..cast
+local fungus	= "(wc_naturae_mushroom.png^[colorize:DARKGREY:200)^[mask:" ..cast
 local shark		= "(nc_terrain_gravel.png^[mask:ncshark_mask.png)^[mask:" ..cast
 
 --<>=====<>=====<>=====<>=====<>=====<>=====<>=====<>=====<>=====<>--
