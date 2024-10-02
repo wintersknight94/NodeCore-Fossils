@@ -26,7 +26,7 @@ adzedef = {
 			uses = 1.45,
 			choppy = 2,
 			crumbly = 3,
-			cracky = 2
+			cracky = 1
 		}),
 	sounds = nodecore.sounds("nc_optics_glassy"),
 }
