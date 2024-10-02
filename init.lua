@@ -17,6 +17,7 @@ include("brush_fancy")
 
 include("amber")
 include("casts")
+include("tooth")
 
 include("deposits")
 

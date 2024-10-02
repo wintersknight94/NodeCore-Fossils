@@ -22,6 +22,7 @@ local leaves	= "(wc_naturae_fern.png^[colorize:GRAY:164)^[mask:nc_lux_dot_mask.p
 local fungus	= "(wc_naturae_mushroom.png^[colorize:GRAY:164)^[mask:nc_lux_dot_mask.png"
 local shark		= "(nc_terrain_gravel.png^[mask:ncshark_mask.png)^[mask:nc_lux_dot_mask.png"
 local geode		= "wc_crystals_geode.png^[mask:nc_lux_dot_mask.png"
+local tooth		= modname.. "_tooth.png^[mask:nc_lux_dot_mask.png"
 -- ================================================================== --
 ------------------------------------------------------------------------
 local function register_fossil(id, desc, txr, hardness, inplace)
@@ -53,10 +54,11 @@ local function register_fossil(id, desc, txr, hardness, inplace)
 end
 -- ================================================================== --
 local function strata(substrate, within, degrade, level)
-	register_fossil("amber_" ..substrate,		"Amber",	"(" ..within.. ")^(" ..amber.. "^[opacity:100)",		level,	degrade)
-	register_fossil("bug_amber_" ..substrate,	"Amber",	"(" ..within.. ")^(" ..bugfossil.. "^[opacity:100)",	level,	degrade)
-	register_fossil("sponge_" ..substrate,		"Sponge",	"(" ..within.. ")^(" ..sponge.. "^[opacity:100)",		level,	degrade)
-	register_fossil("shell_" ..substrate,		"Shell",	"(" ..within.. ")^(" ..shell.. "^[opacity:100)",		level,	degrade)
+	register_fossil("amber_" ..substrate,		"Amber",		"(" ..within.. ")^(" ..amber.. "^[opacity:100)",		level,	degrade)
+	register_fossil("bug_amber_" ..substrate,	"Amber",		"(" ..within.. ")^(" ..bugfossil.. "^[opacity:100)",	level,	degrade)
+	register_fossil("sponge_" ..substrate,		"Sponge",		"(" ..within.. ")^(" ..sponge.. "^[opacity:100)",		level,	degrade)
+	register_fossil("shell_" ..substrate,		"Shell",		"(" ..within.. ")^(" ..shell.. "^[opacity:100)",		level,	degrade)
+	register_fossil("tooth_" ..substrate,		"Wurmtooth",	"(" ..within.. ")^(" ..tooth.. "^[opacity:100)",		level,	degrade)
 	
 	if minetest.get_modpath("wc_naturae") then
 		register_fossil("leaf_" ..substrate,		"Leaf",		"(" ..within.. ")^(" ..leaves.. "^[opacity:100)",	level,	degrade)
