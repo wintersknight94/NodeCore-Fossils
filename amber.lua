@@ -35,8 +35,8 @@ adzedef = {
 	tool_capabilities = nodecore.toolcaps({
 			uses = 1.25,
 			choppy = 2,
-			crumbly = 2,
-			cracky = 2
+			crumbly = 3,
+			cracky = 1
 		}),
 	sounds = nodecore.sounds("nc_optics_glassy"),
 }
