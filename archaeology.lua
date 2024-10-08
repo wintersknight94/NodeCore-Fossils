@@ -23,14 +23,15 @@ nodecore.register_craft({
 end
 
 local function strata(substrata, eroded)
-	brush_fossil("amber_" ..substrata.. "_loose",		modname.. ":amber",			eroded)
-	brush_fossil("bug_amber_" ..substrata.. "_loose",	modname.. ":amber_bug",		eroded)
-	brush_fossil("sponge_" ..substrata.. "_loose",		modname.. ":cast_sponge",	eroded)
-	brush_fossil("shell_" ..substrata.. "_loose",		modname.. ":cast_shell",	eroded)
-	brush_fossil("tooth_" ..substrata.. "_loose",		modname.. ":tooth",			eroded)
+	brush_fossil("amber_" ..substrata.. "_loose",		modname.. ":amber",				eroded)
+	brush_fossil("bug_amber_" ..substrata.. "_loose",	modname.. ":amber_bug",			eroded)
+	brush_fossil("sponge_" ..substrata.. "_loose",		modname.. ":cast_sponge",		eroded)
+	brush_fossil("shell_" ..substrata.. "_loose",		modname.. ":cast_shell",		eroded)
+	brush_fossil("tooth_" ..substrata.. "_loose",		modname.. ":tooth",				eroded)
+	brush_fossil("scale_" ..substrata.. "_loose",		modname.. ":cast_scale",		eroded)
 	
 	if minetest.get_modpath("wc_naturae") then
-		brush_fossil("leaf_" ..substrata.. "_loose",		modname.. ":cast_leaf",		eroded)
+		brush_fossil("leaf_" ..substrata.. "_loose",		modname.. ":cast_leaf",			eroded)
 		brush_fossil("fungus_" ..substrata.. "_loose",		modname.. ":cast_fungus",		eroded)
 	end
 	

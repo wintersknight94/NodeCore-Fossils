@@ -35,6 +35,7 @@ local function strata(sediment, substrate)
 	fossil_gen("sponge_" ..sediment, 		substrate,	293424)
 	fossil_gen("shell_" ..sediment, 		substrate,	023291)
 	fossil_gen("tooth_" ..sediment, 		substrate,	610938)
+	fossil_gen("scale_" ..sediment, 		substrate,	856117)
 	
 	if minetest.get_modpath("wc_naturae") then
 		fossil_gen("leaf_" ..sediment, 		substrate,	578485)
