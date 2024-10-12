@@ -35,7 +35,7 @@ minetest.register_craftitem(modname .. ":cast_sponge", {
 minetest.register_craftitem(modname .. ":cast_scale", {
 	description = "Scale Fossil",
 	inventory_image = scales,
-	groups = {fossil = 1},
+	groups = {fossil = 1, metallic = 1, lux_scatter = 32},
 	sounds = nodecore.sounds("nc_terrain_stony")
 })
 
